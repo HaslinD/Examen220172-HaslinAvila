@@ -85,10 +85,52 @@ int main() {
 			                	dificultad = "Facil";
 			                }
 			                cout << "Agrege la Baraja....";
-			                for (int i = 2; i < 13; ++i)
-			                {
-			                	cartas.push_back(new Cartas(i, ));
+			                for (int i = 1; i <= 11; ++i) {
+			                	if (i == 11) {
+			                		cards.push_back(new Cartas(i, "A♠", "Black"));
+			                	} else if (i == 10) {
+			                		cards.push_back(new Cartas(i, "J♠", "Black"));
+			                		cards.push_back(new Cartas(i, "Q♠", "Black"));
+			                		cards.push_back(new Cartas(i, "K♠", "Black"));
+			                	} else {
+			                		cards.push_back(new Cartas(i, "♠", "Black"));
+			                	}
 			                }
+			                for (int i = 1; i <= 11; ++i) {
+			                	if (i == 11) {
+			                		cards.push_back(new Cartas(i, "A♥", "Red"));
+			                	} else if (i == 10) {
+			                		cards.push_back(new Cartas(i, "J♥", "Red"));
+			                		cards.push_back(new Cartas(i, "Q♥", "Red"));
+			                		cards.push_back(new Cartas(i, "K♥", "Red"));
+			                	} else {
+			                		cards.push_back(new Cartas(i, "♥", "Red"));
+			                	}
+			                }
+			                for (int i = 1; i <= 11; ++i) {
+			                	if (i == 11) {
+			                		cards.push_back(new Cartas(i, "A♦", "Red"));
+			                	} else if (i == 10) {
+			                		cards.push_back(new Cartas(i, "J♦", "Red"));
+			                		cards.push_back(new Cartas(i, "Q♦", "Red"));
+			                		cards.push_back(new Cartas(i, "K♦", "Red"));
+			                	} else {
+			                		cards.push_back(new Cartas(i, "♦", "Red"));
+			                	}
+			                }
+			                for (int i = 1; i <= 11; ++i) {
+			                	if (i == 11) {
+			                		cards.push_back(new Cartas(i, "A♣", "Black"));
+			                	} else if (i == 10) {
+			                		cards.push_back(new Cartas(i, "J♣", "Black"));
+			                		cards.push_back(new Cartas(i, "Q♣", "Black"));
+			                		cards.push_back(new Cartas(i, "K♣", "Black"));
+			                	} else {
+			                		cards.push_back(new Cartas(i, "♣", "Black"));
+			                	}
+			                }
+
+			                
 
 			                repart.push_back(new Repartidor(dificultad, dinero, baraja, nombre, edad, id));
 				           	break;}
