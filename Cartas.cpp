@@ -6,17 +6,17 @@ Cartas :: Cartas () {
 
 }
 
-Cartas :: Cartas (string valor, string simbolos, string color){
+Cartas :: Cartas (int valor, string simbolos, string color){
 	this -> valor = valor;
 	this -> simbolos = simbolos;
 	this -> color = color;
 }
 
-string Cartas :: getValor(){
+int Cartas :: getValor(){
 	return valor;
 }
 
-void Cartas :: setValor(string valor) {
+void Cartas :: setValor(int valor) {
 	this -> valor = valor;
 }
 
@@ -40,7 +40,3 @@ void Cartas :: setColor(string color) {
 /*Cartas* Cartas :: getBaraja() {
 	return cartas;
 }*/
-
-int* Cartas :: CrearPalos() {
-
-}

@@ -8,10 +8,11 @@ using namespace std;
 
 class Baraja {
 	private:
-		Cartas* cartas[52];
+		Cartas* cartas;
 		
 	public:
 		Baraja();
+		Baraja(Cartas*);
 
 		
 };

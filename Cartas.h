@@ -8,17 +8,17 @@ using namespace std;
 
 class Cartas {
 	private:
-		string valor;
+		int valor;
 		string simbolos;
 		string color;
 		Cartas* cartas;
 
 	public:
 		Cartas();
-		Cartas(string, string, string);
+		Cartas(int, string, string);
 
-		string getValor();
-		void setValor(string);
+		int getValor();
+		void setValor(int);
 
 		string getSimbolos();
 		void setSimbolos(string);
@@ -28,6 +28,6 @@ class Cartas {
 
 		//Cartas* getBaraja();
 
-		Cartas* CrearPalos();
+		//Cartas* CrearPalos();
 };
 #endif

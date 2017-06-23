@@ -20,6 +20,7 @@ int main() {
 	vector<Jugador*> jugad;
 	vector<Repartidor*> repart;
 	vector<Mesa*> mesa;
+	vector<Cartas*> cards;
 	bool salir = false;
 	while (!salir){
         switch(menu()){
@@ -84,6 +85,10 @@ int main() {
 			                	dificultad = "Facil";
 			                }
 			                cout << "Agrege la Baraja....";
+			                for (int i = 2; i < 13; ++i)
+			                {
+			                	cartas.push_back(new Cartas(i, ));
+			                }
 
 			                repart.push_back(new Repartidor(dificultad, dinero, baraja, nombre, edad, id));
 				           	break;}
@@ -145,12 +150,13 @@ int main() {
 					                }
 					                int num =  0;
 							       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
+									cout << "--------------------------------------------------------" << endl;
 									for(int i = 0; i < jugad.size(); i++){
 										cout << i << " --> " << jugad.at(i)->getNombre() << endl;
 									}
 									cout << "Ingrese Numero: ";
 									cin >> num;
-									
+									cout << "--------------------------------------------------------" << endl;
 									int num2 =  0;
 							       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
 									for(int i = 0; i < repart.size(); i++){
@@ -158,7 +164,7 @@ int main() {
 									}
 									cout << "Ingrese numero: ";
 									cin >> num2;
-
+									cout << "--------------------------------------------------------" << endl;
 									mesa.push_back(new Mesa(nmesa, tipo, repart.at(num2), jugad.at(num)));
 					               	break;}
 
@@ -182,27 +188,29 @@ int main() {
 					                }
 					                int num =  0;
 							       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
+									cout << "--------------------------------------------------------" << endl;
 									for(int i = 0; i < jugad.size(); i++){
 										cout << i << " --> " << jugad.at(i)->getNombre() << endl;
 									}
 									cout << "Ingrese Numero: ";
 									cin >> num;
-									
+									cout << "--------------------------------------------------------" << endl;
 									int num2 =  0;
 							       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
+									cout << "--------------------------------------------------------" << endl;
 									for(int i = 0; i < repart.size(); i++){
 										cout << i << " --> " << repart.at(i)->getNombre() << endl;
 									}
 									cout << "Ingrese numero: ";
 									cin >> num2;
-
+									cout << "--------------------------------------------------------" << endl;
 									int num3 = 0;
 									cout << "Ingrese El numero de la mesa a Modificar: ";
 									cin >> num3;
-									mesa.at(num3) -> setNmesa(pl1);
-									mesa.at(num3) -> setTipo(marca1);
-									mesa.at(num3) -> setJugad(modelo1);
-									mesa.at(num3) -> setRepart(anio1);
+									mesa.at(num3) -> setNmesa(nmesa1);
+									mesa.at(num3) -> setTipo(tipo1);
+									mesa.at(num3) -> setJugad(jugad.at(num));
+									mesa.at(num3) -> setRepart(repart.at(num2));
 						           	break;}
 
 						        case 3:{

@@ -6,3 +6,6 @@ Baraja :: Baraja () {
 
 }
 
+Baraja :: Baraja (Cartas* cards) {
+	cartas = cards;
+}
