@@ -11,12 +11,16 @@ using namespace std;
 class Mesa {
 	private:
 		int nmesa;
+		string tipo;
 		Repartidor repart;
 		Jugador juga;
 
 	public:
 		Mesa();
-		Mesa(int, Repartidor, Jugador);
+		Mesa(int, string, Repartidor, Jugador);
+
+		string getTipo();
+		void setTipo(string);
 
 		int getNmesa();
 		void setNmesa(int);

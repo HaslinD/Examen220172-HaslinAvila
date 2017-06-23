@@ -6,9 +6,18 @@ Jugador :: Jugador () {
 
 }
 
-Jugador :: Jugador (string apodo, double montodinero, string nombre, int edad, int id) : Persona(nombre, edad, id){
+Jugador :: Jugador (string lugarproced, string apodo, double montodinero, string nombre, int edad, string id) : Persona(nombre, edad, id){
+	this -> lugarproced = lugarproced;
 	this -> apodo = apodo;
 	this -> montodinero = montodinero;
+}
+
+string Jugador :: getLugar() {
+	return lugarproced;
+}
+
+void Jugador :: setLugar() {
+	this -> lugarproced = lugarproced;
 }
 
 string Jugador :: getApodo(){

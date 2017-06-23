@@ -13,7 +13,7 @@ class Persona {
 
 	public:
 		Persona();
-		Persona(string, int, int);
+		Persona(string, int, string);
 
 		string getNombre();
 		void setNombre(string);
@@ -21,7 +21,7 @@ class Persona {
 		int getEdad();
 		void setEdad(int);
 
-		int getID();
-		void setID(int);
+		string getID();
+		void setID(string);
 };
 #endif

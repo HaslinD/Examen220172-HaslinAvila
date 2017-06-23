@@ -14,7 +14,7 @@ class Administrador : public Persona{
 
 	public:
 		Administrador();
-		Administrador(string, string, double, string, int, int);
+		Administrador(string, string, double, string, int, string);
 
 		string getExperiencia();
 		void setExperiencia(string);

@@ -8,12 +8,16 @@ using namespace std;
 
 class Jugador : public Persona{
 	private:
+		string lugarproced;
 		string apodo;
 		double montodinero;
 
 	public:
 		Jugador();
-		Jugador(string, double, string, int, int);
+		Jugador(string, string, double, string, int, string);
+
+		string getLugar();
+		void setLugar(string);
 
 		string getApodo();
 		void setApodo(string);

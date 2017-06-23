@@ -16,7 +16,7 @@ class Repartidor : public Persona{
 
 	public:
 		Repartidor();
-		Repartidor(string, double, Baraja*, string, int, int);
+		Repartidor(string, double, Baraja*, string, int, string);
 
 		string getDificultad();
 		void setDificultad(string);

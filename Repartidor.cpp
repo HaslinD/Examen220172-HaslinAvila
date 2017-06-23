@@ -6,7 +6,7 @@ Repartidor :: Repartidor () {
 
 }
 
-Repartidor :: Repartidor (string dificultad, double dinero, Baraja* baraja, string nombre, int edad, int id) : Persona(nombre, edad, id){
+Repartidor :: Repartidor (string dificultad, double dinero, Baraja* baraja, string nombre, int edad, string id) : Persona(nombre, edad, id){
 	this -> dificultad = dificultad;
 	this -> dinero = dinero;
 	this -> baraja = baraja;

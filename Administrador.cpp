@@ -6,7 +6,7 @@ Administrador :: Administrador () {
 
 }
 
-Administrador :: Administrador (string experiencia, string rango, double gana, string nombre, int edad, int id) : Persona(nombre, edad, id){
+Administrador :: Administrador (string experiencia, string rango, double gana, string nombre, int edad, string id) : Persona(nombre, edad, id){
 	this -> experiencia = experiencia;
 	this -> rango = rango;
 	this -> gana = gana;

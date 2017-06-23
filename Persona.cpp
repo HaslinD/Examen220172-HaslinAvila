@@ -6,7 +6,7 @@ Persona :: Persona () {
 
 }
 
-Persona :: Persona (string nombre, int edad, int id) {
+Persona :: Persona (string nombre, int edad, string id) {
 	this -> nombre = nombre;
 	this -> edad = edad;
 	this -> id = id;
@@ -29,10 +29,10 @@ void Persona :: setEdad(int edad) {
 
 }
 
-int Persona :: getID() {
+string Persona :: getID() {
 	return id;
 }
 
-void Persona :: setID(int id) {
+void Persona :: setID(string id) {
 	this -> id = id;
 }

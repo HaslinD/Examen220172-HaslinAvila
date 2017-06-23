@@ -6,10 +6,19 @@ Mesa :: Mesa () {
 
 }
 
-Mesa :: Mesa (int nmesa, Repartidor repart, Jugador juga) {
+Mesa :: Mesa (int nmesa, string tipo, Repartidor repart, Jugador juga) {
 	this -> nmesa = nmesa;
+	this -> tipo = tipo;
 	this -> repart = repart;
 	this -> juga = juga;
+}
+
+string Mesa :: getTipo(){
+	return tipo;
+}
+
+void Mesa :: setTipo(string tipo) {
+	this -> tipo = tipo;
 }
 
 int Mesa :: getNmesa(){
