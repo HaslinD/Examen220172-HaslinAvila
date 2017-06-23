@@ -1,7 +1,7 @@
-Main: Main.o Persona.o Administrador.o Repartidor.o Baraja.o Cartas.o Jugador.o Mesablackjack.o
-	g++ Main.o Persona.o Administrador.o Repartidor.o Baraja.o Cartas.o Jugador.o Mesablackjack.o -o Main
+Main: Main.o Persona.o Administrador.o Repartidor.o Baraja.o Cartas.o Jugador.o Mesa.o
+	g++ Main.o Persona.o Administrador.o Repartidor.o Baraja.o Cartas.o Jugador.o Mesa.o -o Main
 
-Main.o: Persona.h Administrador.h Repartidor.h Jugador.h Baraja.h Mesablackjack.h Main.cpp
+Main.o: Persona.h Administrador.h Repartidor.h Jugador.h Baraja.h Mesa.h Main.cpp
 	g++ -c Main.cpp
 
 Persona.o: Persona.h Persona.cpp
@@ -19,8 +19,8 @@ Jugador.o: Persona.h Jugador.h Jugador.cpp
 Baraja.o: Cartas.h Baraja.h Baraja.cpp
 	g++ -c Baraja.cpp
 
-Mesablackjack.o: Mesablackjack.h Mesablackjack.cpp
-	g++ -c Mesablackjack.cpp
+Mesa.o: Mesa.h Mesa.cpp
+	g++ -c Mesa.cpp
 
 clean:
 	rm -f *.o Main

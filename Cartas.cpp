@@ -29,7 +29,7 @@ void Cartas :: setSimbolos(string simbolos) {
 
 }
 
-double Cartas :: getColor() {
+string Cartas :: getColor() {
 	return color;
 }
 

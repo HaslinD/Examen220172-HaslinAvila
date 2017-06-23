@@ -6,10 +6,10 @@ Mesa :: Mesa () {
 
 }
 
-Mesa :: Mesa (int nmesa, Repartidor repart, Jugador jugad) {
+Mesa :: Mesa (int nmesa, Repartidor repart, Jugador juga) {
 	this -> nmesa = nmesa;
 	this -> repart = repart;
-	this -> jugad = jugad;
+	this -> juga = juga;
 }
 
 int Mesa :: getNmesa(){
@@ -29,9 +29,9 @@ void Mesa :: setRepart(Repartidor repart) {
 }
 
 Jugador Mesa :: getJugad()  {
-	return jugad
+	return juga;
 }
 
-void Mesa :: setJugad(Jugador jugad) {
-	this -> jugad = jugad;
+void Mesa :: setJugad(Jugador juga) {
+	this -> juga = juga;
 }

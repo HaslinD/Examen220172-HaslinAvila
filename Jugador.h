@@ -13,7 +13,7 @@ class Jugador : public Persona{
 
 	public:
 		Jugador();
-		Jugador(string, double);
+		Jugador(string, double, string, int, int);
 
 		string getApodo();
 		void setApodo(string);

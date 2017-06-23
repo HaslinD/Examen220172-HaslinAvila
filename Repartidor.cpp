@@ -24,6 +24,6 @@ double Repartidor :: getDinero() {
 	return dinero;
 }
 
-void Repartidor :: setRango(double dinero) {
+void Repartidor :: setDinero(double dinero) {
 	this -> dinero = dinero;
 }
