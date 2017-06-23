@@ -12,12 +12,12 @@ class Mesa {
 	private:
 		int nmesa;
 		string tipo;
-		Repartidor repart;
-		Jugador juga;
+		Repartidor* repart;
+		Jugador* juga;
 
 	public:
 		Mesa();
-		Mesa(int, string, Repartidor, Jugador);
+		Mesa(int, string, Repartidor*, Jugador*);
 
 		string getTipo();
 		void setTipo(string);
@@ -25,10 +25,10 @@ class Mesa {
 		int getNmesa();
 		void setNmesa(int);
 
-		Repartidor getRepart();
-		void setRepart(Repartidor);
+		Repartidor* getRepart();
+		void setRepart(Repartidor*);
 
-		Jugador getJugad();
-		void setJugad(Jugador);
+		Jugador* getJugad();
+		void setJugad(Jugador*);
 };
 #endif

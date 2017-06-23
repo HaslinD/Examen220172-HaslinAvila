@@ -36,3 +36,11 @@ string Cartas :: getColor() {
 void Cartas :: setColor(string color) {
 	this -> color = color;
 }
+
+/*Cartas* Cartas :: getBaraja() {
+	return cartas;
+}*/
+
+int* Cartas :: CrearPalos() {
+
+}

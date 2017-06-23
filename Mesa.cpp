@@ -6,7 +6,7 @@ Mesa :: Mesa () {
 
 }
 
-Mesa :: Mesa (int nmesa, string tipo, Repartidor repart, Jugador juga) {
+Mesa :: Mesa (int nmesa, string tipo, Repartidor* repart, Jugador* juga) {
 	this -> nmesa = nmesa;
 	this -> tipo = tipo;
 	this -> repart = repart;
@@ -29,18 +29,18 @@ void Mesa :: setNmesa(int nmesa) {
 	this -> nmesa = nmesa;
 }
 
-Repartidor Mesa :: getRepart() {
+Repartidor* Mesa :: getRepart() {
 	return repart;
 }
 
-void Mesa :: setRepart(Repartidor repart) {
+void Mesa :: setRepart(Repartidor* repart) {
 	this -> repart = repart;
 }
 
-Jugador Mesa :: getJugad()  {
+Jugador* Mesa :: getJugad()  {
 	return juga;
 }
 
-void Mesa :: setJugad(Jugador juga) {
+void Mesa :: setJugad(Jugador* juga) {
 	this -> juga = juga;
 }

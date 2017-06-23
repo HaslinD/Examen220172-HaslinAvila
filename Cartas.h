@@ -1,4 +1,5 @@
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -10,6 +11,7 @@ class Cartas {
 		string valor;
 		string simbolos;
 		string color;
+		Cartas* cartas;
 
 	public:
 		Cartas();
@@ -23,6 +25,9 @@ class Cartas {
 
 		string getColor();
 		void setColor(string);
-		
+
+		//Cartas* getBaraja();
+
+		Cartas* CrearPalos();
 };
 #endif

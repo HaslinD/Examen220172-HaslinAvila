@@ -6,6 +6,7 @@
 #include "Persona.h"
 #include "Administrador.h"
 #include "Mesa.h"
+#include "Cartas.h"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ int main() {
 	vector<Administrador*> admin;
 	vector<Jugador*> jugad;
 	vector<Repartidor*> repart;
+	vector<Mesa*> mesa;
 	bool salir = false;
 	while (!salir){
         switch(menu()){
@@ -124,15 +126,94 @@ int main() {
 						while (!salir3){
 					        switch(menu3()){
 					           	case 1:{
-					                
+					           		int nmesa, opt3;
+					           		string tipo;
+					                cout << "Ingrese numero de Mesa: ";
+					                cin >> nmesa;
+					                cout << "Ingrese el La Dificultad: " << endl;
+					                cout << "[1] V.I.P" << endl 
+					                	 << "[2] CLASICA" << endl 
+					                	 << "[3] VIAJERO" << endl;
+					               	cout << "Selccione una opcion: ";
+					               	cin >> opt3;
+					                if (opt3 == 1) {
+					                	tipo = "V.I.P";
+					                } else if (opt3 == 2) {
+					                	tipo = "CLASICA";
+					                } else if (opt3 == 3) {
+					                	tipo = "VIAJERO";
+					                }
+					                int num =  0;
+							       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
+									for(int i = 0; i < jugad.size(); i++){
+										cout << i << " --> " << jugad.at(i)->getNombre() << endl;
+									}
+									cout << "Ingrese Numero: ";
+									cin >> num;
+									
+									int num2 =  0;
+							       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
+									for(int i = 0; i < repart.size(); i++){
+										cout << i << " --> " << repart.at(i)->getNombre() << endl;
+									}
+									cout << "Ingrese numero: ";
+									cin >> num2;
+
+									mesa.push_back(new Mesa(nmesa, tipo, repart.at(num2), jugad.at(num)));
 					               	break;}
 
 						       	case 2:{
-						                
+						            int nmesa1, opt3;
+					           		string tipo1;
+					                cout << "Ingrese numero de Mesa: ";
+					                cin >> nmesa1;
+					                cout << "Ingrese el La Dificultad: " << endl;
+					                cout << "[1] V.I.P" << endl 
+					                	 << "[2] CLASICA" << endl 
+					                	 << "[3] VIAJERO" << endl;
+					               	cout << "Selccione una opcion: ";
+					               	cin >> opt3;
+					                if (opt3 == 1) {
+					                	tipo1 = "V.I.P";
+					                } else if (opt3 == 2) {
+					                	tipo1 = "CLASICA";
+					                } else if (opt3 == 3) {
+					                	tipo1 = "VIAJERO";
+					                }
+					                int num =  0;
+							       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
+									for(int i = 0; i < jugad.size(); i++){
+										cout << i << " --> " << jugad.at(i)->getNombre() << endl;
+									}
+									cout << "Ingrese Numero: ";
+									cin >> num;
+									
+									int num2 =  0;
+							       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
+									for(int i = 0; i < repart.size(); i++){
+										cout << i << " --> " << repart.at(i)->getNombre() << endl;
+									}
+									cout << "Ingrese numero: ";
+									cin >> num2;
+
+									int num3 = 0;
+									cout << "Ingrese El numero de la mesa a Modificar: ";
+									cin >> num3;
+									mesa.at(num3) -> setNmesa(pl1);
+									mesa.at(num3) -> setTipo(marca1);
+									mesa.at(num3) -> setJugad(modelo1);
+									mesa.at(num3) -> setRepart(anio1);
 						           	break;}
 
 						        case 3:{
-
+						        	int numbers =  0;
+							       	cout << "Ingrese la posicion que quiere eliminar: " << endl;
+									for(int i = 0; i < mesa.size(); i++){
+										cout << i << " --> " << mesa.at(i) -> getNmesa() << endl;
+									}
+									cin >> numbers;
+									mesa.erase(mesa.begin() + numbers);
+									cout << "Obra ha eliminada" << endl;
 						        	break;}
 
 						       	case 4:
@@ -268,20 +349,3 @@ int menu4(){
     return opcion;
 }
 
-string RandomPlaca(){
-	int random;
-	stringstream random2;
-	string simbolos = "♠♥♦♣";
-	for(int i = 0; i < 52; i++){
-		random = rand() % 13 + 1;
-		if(random == 1){
-			random2 << "A";
-		} else if(random == 11){
-            random2 << "J";
-        } else if(random == 12){
-        	random2 << "Q";
-   		} else if(random == 13){
-        	random2 << "K";
-   		}   
-	}
-}

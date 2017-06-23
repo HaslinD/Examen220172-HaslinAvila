@@ -12,6 +12,7 @@ class Baraja {
 		
 	public:
 		Baraja();
+
 		
 };
 #endif
