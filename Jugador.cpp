@@ -16,7 +16,7 @@ string Jugador :: getLugar() {
 	return lugarproced;
 }
 
-void Jugador :: setLugar() {
+void Jugador :: setLugar(string lugarproced) {
 	this -> lugarproced = lugarproced;
 }
 

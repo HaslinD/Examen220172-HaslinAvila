@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sstream>
 #include "Persona.h"
 #include "Administrador.h"
 #include "Mesa.h"
@@ -128,7 +131,11 @@ int main() {
 						                
 						           	break;}
 
-						       	case 3:
+						        case 3:{
+
+						        	break;}
+
+						       	case 4:
 						           	salir3 = true;
 						           	break;
 						    }
@@ -136,6 +143,7 @@ int main() {
 					} else {
 						for (int i = 0; i < jugad.size(); ++i) {
 							if((nombre1 == jugad.at(i) -> getNombre()) && (id1 == jugad.at(i) -> getID())){
+								bool salir4 = false;
 								while (!salir4){
 							        switch(menu4()){
 							           	case 1:{
@@ -263,25 +271,17 @@ int menu4(){
 string RandomPlaca(){
 	int random;
 	stringstream random2;
-	stringstream random3;
-	string random4;
-	string 
-	for(int i = 0; i < 3; i++){
-		random = rand() % 27 + 1;
+	string simbolos = "♠♥♦♣";
+	for(int i = 0; i < 52; i++){
+		random = rand() % 13 + 1;
 		if(random == 1){
 			random2 << "A";
-		} else if(random == 2){
-            random2 << "B";
-        } else if(random == 3){
-        	random2 << "C";
-   		}
-        random2 << "-";
-        for (int i = 0; i < 4; ++i)
-        {
-        	random = rand() % 9 + 0;
-        	random3 << random;
-        }
+		} else if(random == 11){
+            random2 << "J";
+        } else if(random == 12){
+        	random2 << "Q";
+   		} else if(random == 13){
+        	random2 << "K";
+   		}   
 	}
-	random4 = random2.str() + random3.str();
-	return random4;
 }

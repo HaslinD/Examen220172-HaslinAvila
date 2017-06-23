@@ -9,7 +9,7 @@ class Persona {
 	private:
 		string nombre;
 		int edad;
-		int id;
+		string id;
 
 	public:
 		Persona();
