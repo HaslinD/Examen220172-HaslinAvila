@@ -6,7 +6,7 @@ using namespace std;
 #ifndef ADMINISTRADOR_H
 #define ADMINISTRADOR_H
 
-class Administrador {
+class Administrador : public Persona{
 	private:
 		string experiencia;
 		string rango;
@@ -14,7 +14,7 @@ class Administrador {
 
 	public:
 		Administrador();
-		Administrador(string, string, double);
+		Administrador(string, string, double, string, string, int);
 
 		string getExperiencia();
 		void setExperiencia(string);

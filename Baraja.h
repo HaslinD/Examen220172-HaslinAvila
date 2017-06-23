@@ -9,6 +9,7 @@ using namespace std;
 class Baraja {
 	private:
 		Cartas* cartas[52];
+		
 	public:
 		Baraja();
 		

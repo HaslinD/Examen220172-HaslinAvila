@@ -8,7 +8,7 @@ using namespace std;
 #ifndef REPARTIDOR_H
 #define REPARTIDOR_H
 
-class Repartidor {
+class Repartidor : public Persona{
 	private:
 		string dificultad;
 		double dinero;
@@ -16,15 +16,13 @@ class Repartidor {
 
 	public:
 		Repartidor();
-		Repartidor(string, string, double);
+		Repartidor(string, double, Baraja*, string, int, int);
 
-		string getExperiencia();
-		void setExperiencia(string);
+		string getDificultad();
+		void setDificultad(string);
 
-		string getRango();
-		void setRango(string);
+		double getDinero();
+		void setDinero(double);
 
-		double getGana();
-		void setGana(double);
 };
 #endif
