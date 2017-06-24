@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include "Cartas.h"
 
 using namespace std;
@@ -8,11 +9,11 @@ using namespace std;
 
 class Baraja {
 	private:
-		Cartas* cartas;
+		vector<Cartas*> cards;
 		
 	public:
 		Baraja();
-		Baraja(Cartas*);
+		Baraja(vector<Cartas*>);
 
 		
 };

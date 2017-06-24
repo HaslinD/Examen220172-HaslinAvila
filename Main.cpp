@@ -173,86 +173,94 @@ int main() {
 						while (!salir3){
 					        switch(menu3()){
 					           	case 1:{
-					           		int nmesa, opt3;
-					           		string tipo;
-					                cout << "Ingrese numero de Mesa: ";
-					                cin >> nmesa;
-					                cout << "Ingrese el La Dificultad: " << endl;
-					                cout << "[1] V.I.P" << endl 
-					                	 << "[2] CLASICA" << endl 
-					                	 << "[3] VIAJERO" << endl;
-					               	cout << "Selccione una opcion: ";
-					               	cin >> opt3;
-					                if (opt3 == 1) {
-					                	tipo = "V.I.P";
-					                } else if (opt3 == 2) {
-					                	tipo = "CLASICA";
-					                } else if (opt3 == 3) {
-					                	tipo = "VIAJERO";
-					                }
-					                int num =  0;
-							       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
-									cout << "--------------------------------------------------------" << endl;
-									for(int i = 0; i < jugad.size(); i++){
-										cout << i << " --> " << jugad.at(i)->getNombre() << endl;
+					           		if (jugad.size() == 0 || repart.size() == 0) {
+					           			cout << "No HAY UN JUGADOR O REPARTIDOR PARA CREAR LA Mesa" << endl;
+					           		} else {
+						           		int nmesa, opt3;
+						           		string tipo;
+						                cout << "Ingrese numero de Mesa: ";
+						                cin >> nmesa;
+						                cout << "Ingrese el La Dificultad: " << endl;
+						                cout << "[1] V.I.P" << endl 
+						                	 << "[2] CLASICA" << endl 
+						                	 << "[3] VIAJERO" << endl;
+						               	cout << "Selccione una opcion: ";
+						               	cin >> opt3;
+						                if (opt3 == 1) {
+						                	tipo = "V.I.P";
+						                } else if (opt3 == 2) {
+						                	tipo = "CLASICA";
+						                } else if (opt3 == 3) {
+						                	tipo = "VIAJERO";
+						                }
+						                int num =  0;
+								       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
+										cout << "--------------------------------------------------------" << endl;
+										for(int i = 0; i < jugad.size(); i++){
+											cout << i << " --> " << jugad.at(i)->getNombre() << endl;
+										}
+										cout << "Ingrese Numero: ";
+										cin >> num;
+										cout << "--------------------------------------------------------" << endl;
+										int num2 =  0;
+								       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
+										for(int i = 0; i < repart.size(); i++){
+											cout << i << " --> " << repart.at(i)->getNombre() << endl;
+										}
+										cout << "Ingrese numero: ";
+										cin >> num2;
+										cout << "--------------------------------------------------------" << endl;
+										mesa.push_back(new Mesa(nmesa, tipo, repart.at(num2), jugad.at(num)));
 									}
-									cout << "Ingrese Numero: ";
-									cin >> num;
-									cout << "--------------------------------------------------------" << endl;
-									int num2 =  0;
-							       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
-									for(int i = 0; i < repart.size(); i++){
-										cout << i << " --> " << repart.at(i)->getNombre() << endl;
-									}
-									cout << "Ingrese numero: ";
-									cin >> num2;
-									cout << "--------------------------------------------------------" << endl;
-									mesa.push_back(new Mesa(nmesa, tipo, repart.at(num2), jugad.at(num)));
 					               	break;}
 
 						       	case 2:{
-						            int nmesa1, opt3;
-					           		string tipo1;
-					                cout << "Ingrese numero de Mesa: ";
-					                cin >> nmesa1;
-					                cout << "Ingrese el La Dificultad: " << endl;
-					                cout << "[1] V.I.P" << endl 
-					                	 << "[2] CLASICA" << endl 
-					                	 << "[3] VIAJERO" << endl;
-					               	cout << "Selccione una opcion: ";
-					               	cin >> opt3;
-					                if (opt3 == 1) {
-					                	tipo1 = "V.I.P";
-					                } else if (opt3 == 2) {
-					                	tipo1 = "CLASICA";
-					                } else if (opt3 == 3) {
-					                	tipo1 = "VIAJERO";
-					                }
-					                int num =  0;
-							       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
-									cout << "--------------------------------------------------------" << endl;
-									for(int i = 0; i < jugad.size(); i++){
-										cout << i << " --> " << jugad.at(i)->getNombre() << endl;
+						       		if (mesa.size() == 0) {
+						       			cout << "No HAY MESAS QUE EDITAR" << endl;
+						       		} else {
+							            int nmesa1, opt3;
+						           		string tipo1;
+						                cout << "Ingrese numero de Mesa: ";
+						                cin >> nmesa1;
+						                cout << "Ingrese el La Dificultad: " << endl;
+						                cout << "[1] V.I.P" << endl 
+						                	 << "[2] CLASICA" << endl 
+						                	 << "[3] VIAJERO" << endl;
+						               	cout << "Selccione una opcion: ";
+						               	cin >> opt3;
+						                if (opt3 == 1) {
+						                	tipo1 = "V.I.P";
+						                } else if (opt3 == 2) {
+						                	tipo1 = "CLASICA";
+						                } else if (opt3 == 3) {
+						                	tipo1 = "VIAJERO";
+						                }
+						                int num =  0;
+								       	cout << "Ingrese la posicion del Jugador a agregar a la Mesa: " << endl;
+										cout << "--------------------------------------------------------" << endl;
+										for(int i = 0; i < jugad.size(); i++){
+											cout << i << " --> " << jugad.at(i)->getNombre() << endl;
+										}
+										cout << "Ingrese Numero: ";
+										cin >> num;
+										cout << "--------------------------------------------------------" << endl;
+										int num2 =  0;
+								       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
+										cout << "--------------------------------------------------------" << endl;
+										for(int i = 0; i < repart.size(); i++){
+											cout << i << " --> " << repart.at(i)->getNombre() << endl;
+										}
+										cout << "Ingrese numero: ";
+										cin >> num2;
+										cout << "--------------------------------------------------------" << endl;
+										int num3 = 0;
+										cout << "Ingrese El numero de la mesa a Modificar: ";
+										cin >> num3;
+										mesa.at(num3) -> setNmesa(nmesa1);
+										mesa.at(num3) -> setTipo(tipo1);
+										mesa.at(num3) -> setJugad(jugad.at(num));
+										mesa.at(num3) -> setRepart(repart.at(num2));
 									}
-									cout << "Ingrese Numero: ";
-									cin >> num;
-									cout << "--------------------------------------------------------" << endl;
-									int num2 =  0;
-							       	cout << "Ingrese la posicion del Repartidor a agregar a la Mesa: " << endl;
-									cout << "--------------------------------------------------------" << endl;
-									for(int i = 0; i < repart.size(); i++){
-										cout << i << " --> " << repart.at(i)->getNombre() << endl;
-									}
-									cout << "Ingrese numero: ";
-									cin >> num2;
-									cout << "--------------------------------------------------------" << endl;
-									int num3 = 0;
-									cout << "Ingrese El numero de la mesa a Modificar: ";
-									cin >> num3;
-									mesa.at(num3) -> setNmesa(nmesa1);
-									mesa.at(num3) -> setTipo(tipo1);
-									mesa.at(num3) -> setJugad(jugad.at(num));
-									mesa.at(num3) -> setRepart(repart.at(num2));
 						           	break;}
 
 						        case 3:{
