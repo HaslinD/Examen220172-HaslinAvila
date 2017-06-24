@@ -9,12 +9,14 @@ using namespace std;
 
 class Baraja {
 	private:
-		vector<Cartas*> cards;
+		vector<Cartas*> cartas;
 		
 	public:
 		Baraja();
 		Baraja(vector<Cartas*>);
 
+		vector<Cartas*> getBaraja();
+		void setBaraja(vector<Cartas*>);		
 		
 };
 #endif

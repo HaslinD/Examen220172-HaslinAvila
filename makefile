@@ -19,6 +19,9 @@ Jugador.o: Persona.h Jugador.h Jugador.cpp
 Baraja.o: Cartas.h Baraja.h Baraja.cpp
 	g++ -c Baraja.cpp
 
+Cartas.o: Cartas.h Cartas.cpp
+	g++ -c Cartas.cpp
+
 Mesa.o: Mesa.h Mesa.cpp
 	g++ -c Mesa.cpp
 

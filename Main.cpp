@@ -85,51 +85,55 @@ int main() {
 			                	dificultad = "Facil";
 			                }
 			                cout << "Agrege la Baraja....";
-			                for (int i = 1; i <= 11; ++i) {
+			                for (int i = 2; i <= 11; ++i) {
 			                	if (i == 11) {
-			                		cards.push_back(new Cartas(i, "A♠", "Black"));
+			                		cards.push_back(new Cartas(11, "A♠", "Black"));
 			                	} else if (i == 10) {
-			                		cards.push_back(new Cartas(i, "J♠", "Black"));
-			                		cards.push_back(new Cartas(i, "Q♠", "Black"));
-			                		cards.push_back(new Cartas(i, "K♠", "Black"));
+			                		cards.push_back(new Cartas(10, "J♠", "Black"));
+			                		cards.push_back(new Cartas(10, "Q♠", "Black"));
+			                		cards.push_back(new Cartas(10, "K♠", "Black"));
+			                		cards.push_back(new Cartas(10, "♠", "Black"));
 			                	} else {
 			                		cards.push_back(new Cartas(i, "♠", "Black"));
 			                	}
 			                }
 			                for (int i = 1; i <= 11; ++i) {
 			                	if (i == 11) {
-			                		cards.push_back(new Cartas(i, "A♥", "Red"));
+			                		cards.push_back(new Cartas(11, "A♥", "Red"));
 			                	} else if (i == 10) {
-			                		cards.push_back(new Cartas(i, "J♥", "Red"));
-			                		cards.push_back(new Cartas(i, "Q♥", "Red"));
-			                		cards.push_back(new Cartas(i, "K♥", "Red"));
+			                		cards.push_back(new Cartas(10, "J♥", "Red"));
+			                		cards.push_back(new Cartas(10, "Q♥", "Red"));
+			                		cards.push_back(new Cartas(10, "K♥", "Red"));
+			                		cards.push_back(new Cartas(10, "♥", "Red"));
 			                	} else {
 			                		cards.push_back(new Cartas(i, "♥", "Red"));
 			                	}
 			                }
 			                for (int i = 1; i <= 11; ++i) {
 			                	if (i == 11) {
-			                		cards.push_back(new Cartas(i, "A♦", "Red"));
+			                		cards.push_back(new Cartas(11, "A♦", "Red"));
 			                	} else if (i == 10) {
-			                		cards.push_back(new Cartas(i, "J♦", "Red"));
-			                		cards.push_back(new Cartas(i, "Q♦", "Red"));
-			                		cards.push_back(new Cartas(i, "K♦", "Red"));
+			                		cards.push_back(new Cartas(10, "J♦", "Red"));
+			                		cards.push_back(new Cartas(10, "Q♦", "Red"));
+			                		cards.push_back(new Cartas(10, "K♦", "Red"));
+			                		cards.push_back(new Cartas(10, "♦", "Red"));
 			                	} else {
 			                		cards.push_back(new Cartas(i, "♦", "Red"));
 			                	}
 			                }
 			                for (int i = 1; i <= 11; ++i) {
 			                	if (i == 11) {
-			                		cards.push_back(new Cartas(i, "A♣", "Black"));
+			                		cards.push_back(new Cartas(11, "A♣", "Black"));
 			                	} else if (i == 10) {
-			                		cards.push_back(new Cartas(i, "J♣", "Black"));
-			                		cards.push_back(new Cartas(i, "Q♣", "Black"));
-			                		cards.push_back(new Cartas(i, "K♣", "Black"));
+			                		cards.push_back(new Cartas(10, "J♣", "Black"));
+			                		cards.push_back(new Cartas(10, "Q♣", "Black"));
+			                		cards.push_back(new Cartas(10, "K♣", "Black"));
+			                		cards.push_back(new Cartas(10, "♣", "Black"));
 			                	} else {
 			                		cards.push_back(new Cartas(i, "♣", "Black"));
 			                	}
 			                }
-
+			                baraja = new Baraja(cards);
 			                
 
 			                repart.push_back(new Repartidor(dificultad, dinero, baraja, nombre, edad, id));
