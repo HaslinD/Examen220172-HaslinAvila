@@ -172,7 +172,7 @@ int main() {
 	            cout << "Ingrese su ID: ";
 	            cin >> id1;
 				for (int i = 0; i < admin.size(); i++) {
-					if((nombre1 == admin.at(i) -> getNombre()) && (id1 == admin.at(i) -> getID())){
+					if(admin.at(i) -> getNombre() == nombre1 && admin.at(i) -> getID() == id1){
 						bool salir3 = false;
 						while (!salir3){
 					        switch(menu3()){
@@ -259,6 +259,9 @@ int main() {
 										cout << "--------------------------------------------------------" << endl;
 										int num3 = 0;
 										cout << "Ingrese El numero de la mesa a Modificar: ";
+										for(int i = 0; i < mesa.size(); i++){
+											cout << i << " --> " << mesa.at(i)->getNmesa() << endl;
+										}
 										cin >> num3;
 										mesa.at(num3) -> setNmesa(nmesa1);
 										mesa.at(num3) -> setTipo(tipo1);
@@ -285,7 +288,7 @@ int main() {
 						}
 					} else {
 						for (int i = 0; i < jugad.size(); ++i) {
-							if((nombre1 == jugad.at(i) -> getNombre()) && (id1 == jugad.at(i) -> getID())){
+							if(jugad.at(i) -> getNombre() == nombre1 && jugad.at(i) -> getID() == id1){
 								bool salir4 = false;
 								while (!salir4){
 							        switch(menu4()){
@@ -345,8 +348,8 @@ int menu2(){
     do{
         cout << "-----MENU------" << endl
              << "1.- Agregar Administrador" << endl
-             << "2.- Agregar Jugador" << endl
-             << "3.- Agregar Repartidor" << endl
+             << "2.- Agregar Repartidor" << endl
+             << "3.- Agregar Jugador" << endl
              << "4.- Salir" << endl; 
 
         cout << " Ingrese una opción: ";
@@ -368,10 +371,10 @@ int menu3(){
     bool valido = true;
     do{
         cout << "-----MENU------" << endl
-             << "1.- Agregar Administrador" << endl
-             << "2.- Agregar Jugador" << endl
-             << "3.- Agregar Repartidor" << endl
-             << "4.- Salir" << endl; 
+             << "1.- Agregar Mesa" << endl
+             << "2.- Modificar Mesa" << endl
+             << "3.- Eliminar Mesa" << endl
+             << "4.- Salir" << endl;  
 
         cout << " Ingrese una opción: ";
         cin >> opcion;
@@ -392,9 +395,9 @@ int menu4(){
     bool valido = true;
     do{
         cout << "-----MENU------" << endl
-             << "1.- Agregar Administrador" << endl
-             << "2.- Agregar Jugador" << endl
-             << "3.- Agregar Repartidor" << endl
+             << "1.- Agregar Mesa" << endl
+             << "2.- Modificar Mesa" << endl
+             << "3.- Eliminar Mesa" << endl
              << "4.- Salir" << endl; 
 
         cout << " Ingrese una opción: ";
